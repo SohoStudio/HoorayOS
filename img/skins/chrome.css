@@ -1,0 +1,39 @@
+/*该皮肤参考lhgdialog插件皮肤，并在此基础上进行了修改*/
+/* lhgdialog : http://bbs.lhgcore.com/lhg4/index.html */
+
+/*窗口*/
+.window-container{border:1px solid #333;border-radius:3px;background:#559AEE}
+/*当前窗口*/
+.window-current{border:1px solid #000}
+/*标题*/
+.title-bar{position:relative;z-index:1;height:24px;line-height:24px;margin-top:-2px;overflow:hidden;color:#FFF;cursor:default;background:url(chrome/chrome_s2.gif) 0 -2px repeat-x}
+/*标题图标*/
+.title-bar .icon{display:none}
+/*标题文字*/
+.title-bar .title{padding-left:6px;color:#fff;font-size:14px;font-weight:bold}
+/*窗口右上角操作按钮*/
+.title-handle{position:absolute;z-index:1;top:0px;right:5px;font-size:0;cursor:pointer}
+.title-handle a{position:relative;text-decoration:none;letter-spacing:normal;text-align:center;display:inline-block;*display:inline;zoom:1;vertical-align:top;font-family:tahoma,arial,\5b8b\4f53,sans-serif}
+.title-handle a{background-image:url(chrome/chrome_s.gif);background-repeat:no-repeat;color:#FFF;width:25px;height:18px;line-height:18px}
+.title-handle .ha-hide{background-position:0 0}
+.title-handle .ha-hide:hover{background-position:0 -18px}
+.title-handle .ha-max{background-position:-25px 0}
+.title-handle .ha-max:hover{background-position:-25px -18px}
+.title-handle .ha-revert{background-position:-50px 0}
+.title-handle .ha-revert:hover{background-position:-50px -18px}
+.title-handle .ha-close{background-position:-75px 0;_z-index:1;font-size:0;line-height:0;overflow:hidden;_margin-left:0;width:44px}
+.title-handle .ha-close:hover,.ui_close:focus{background-position:-75px -18px}
+
+/*窗口内部iframe*/
+.window-frame{position:absolute;top:24px;right:2px;bottom:32px;*bottom:29px;left:2px;background:#FFF}
+*html .window-frame{
+	height:expression((function(el){
+		el.style.height=el.parentNode.clientHeight-59+"px";
+	})(this));
+}
+.window-frame iframe{position:absolute;border:0;height:100%;width:100%;top:0;bottom:0;left:0;right:0}
+/*底部*/
+.set-bar{_width:100%;position:absolute;background:#E8E8E8;border-top:1px solid #b9b9b9;bottom:0;height:30px;left:2px;right:2px;bottom:2px}
+.set-bar .btn{margin-top:3px;margin-right:5px;border:1px solid #E8E8E8;border-radius:3px 3px 3px 3px;color:#7D7D7D;cursor:pointer;display:inline-block;height:20px;padding:1px;position:relative}
+.set-bar .btn:hover{border:1px solid #7D7D7D;background:#FFF;color:#333;text-decoration:none}
+.set-bar .btn .btn-con{height:20px;line-height:21px;overflow:hidden;padding:0 6px 0 30px}

@@ -1,0 +1,44 @@
+/*该皮肤参考lhgdialog插件皮肤，并在此基础上进行了修改 （该皮肤作者：一丝冰凉，QQ：50167214）*/
+/* lhgdialog : http://bbs.lhgcore.com/lhg4/index.html */
+
+/*窗口*/
+.window-container{padding:1px;border-radius:3px;background:#6E6E6E}
+/*当前窗口*/
+.window-current{}
+/*标题*/
+.title-bar{position:relative;z-index:1;height:28px;padding:0 10px;line-height:28px;overflow:hidden;color:#505050;cursor:default;background:-webkit-gradient(linear,0% 0%,0% 100%,from(#ebebeb),to(#c3c3c3));background:-moz-linear-gradient(top,#ebebeb,#c3c3c3 );background:-o-linear-gradient(top,#ebebeb,#c3c3c3);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebebeb',endColorstr='#c3c3c3');*background:#DDD;}
+/*当前窗口标题*/
+.window-current .title-bar{}
+/*标题图标*/
+.title-bar .icon{position:absolute;top:6px;left:6px;width:16px;height:16px;border-radius:3px}
+/*标题文字*/
+.title-bar .title{display:inline-block;width:100%;text-align:center;font-size:14px;text-shadow:0 1px 1px #fff}
+/*窗口右上角操作按钮*/
+.title-handle{position:absolute;z-index:1;top:3px;right:5px;font-size:0;cursor:pointer}
+.title-handle a{position:relative;text-decoration:none;letter-spacing:normal;text-align:center;display:inline-block;*display:inline;zoom:1;vertical-align:top;font-family:tahoma,arial,\5b8b\4f53,sans-serif}
+.title-handle a{color:#505050;font-size:22px;width:22px;height:20px;line-height:18px;cursor:pointer}
+.title-handle a b{display:block;position:absolute;overflow:hidden;cursor:pointer}
+.title-handle .ha-hide .hide-b{top:10px;left:6px;width:10px;height:2px;border-bottom:2px solid #505050}
+.title-handle .ha-max .max-b{top:7px;left:5px;width:10px;height:5px;border:1px solid #505050;border-top-width:3px}
+.title-handle .ha-revert .revert-b{top:4px;left:5px;width:10px;height:5px;border:1px solid #505050;border-top-width:3px}
+.title-handle .ha-revert .revert-t{top:8px;left:3px;width:10px;height:5px;border:1px solid #505050;border-top-width:3px;background:#D2D2D2}
+.title-handle .ha-hide:hover b,
+.title-handle .ha-max:hover b,
+.title-handle .ha-revert:hover b{border-color:#2492FF}
+.title-handle .ha-fullscreen{color:#505050}
+.title-handle .ha-fullscreen:hover{color:#2492FF}
+.title-handle .ha-close{color:#BF160B}
+.title-handle .ha-close:hover{color:#BF160B}
+/*窗口内部iframe*/
+.window-frame{position:absolute;top:30px;right:1px;bottom:32px;*bottom:29px;left:1px;background:#FFF}
+*html .window-frame{
+	height:expression((function(el){
+		el.style.height=el.parentNode.clientHeight-59+"px";
+	})(this));
+}
+.window-frame iframe{position:absolute;border:0;height:100%;width:100%;top:0;bottom:0;left:0;right:0}
+/*底部*/
+.set-bar{_width:100%;position:absolute;background:#E8E8E8;border-top:1px solid #b9b9b9;height:30px;left:1px;right:1px;bottom:1px;background:-webkit-gradient(linear,0% 0%,0% 100%,from(#ebebeb),to(#c3c3c3));background:-moz-linear-gradient(top,#ebebeb,#c3c3c3 );background:-o-linear-gradient(top,#ebebeb,#c3c3c3);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebebeb',endColorstr='#c3c3c3');*background:#DDD;}
+.set-bar .btn{margin-top:4px;margin-right:5px;color:#fff;cursor:pointer;display:inline-block;height:20px;width:34px;padding:1px;position:relative}
+.set-bar .btn:hover{color:#333;text-decoration:none}
+.set-bar .btn .btn-con{display:none;height:20px;line-height:21px;overflow:hidden;padding:0 10px 0 10px}

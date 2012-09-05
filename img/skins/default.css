@@ -1,0 +1,42 @@
+/*窗口*/
+.window-container{background:#eee;border:1px solid #999}
+/*当前窗口*/
+.window-current{background:#eee}
+/*标题*/
+.title-bar{position:relative;z-index:1;height:27px;padding:0 10px;line-height:27px;overflow:hidden;color:#FFF;border-bottom:1px solid #fff;cursor:default;background:#eee}
+/*当前窗口标题*/
+.window-current .title-bar{background:#eee}
+/*标题图标*/
+.title-bar .icon{position:absolute;top:5px;left:5px;width:16px;height:16px;border-radius:3px}
+/*标题文字*/
+.title-bar .title{display:inline-block;width:100%;text-align:center;color:#036;font-size:14px}
+/*窗口右上角操作按钮*/
+.title-handle{position:absolute;z-index:1;top:5px;right:5px;font-size:0;cursor:pointer}
+.title-handle a{position:relative;text-decoration:none;letter-spacing:normal;text-align:center;display:inline-block;*display:inline;zoom:1;vertical-align:top;font-family:tahoma,arial,\5b8b\4f53,sans-serif}
+.title-handle a{color:#373737;font-size:22px;width:22px;height:22px;line-height:18px}
+.title-handle a b{display:block;position:absolute;overflow:hidden;cursor:pointer}
+.title-handle .ha-hide .hide-b{top:10px;left:6px;width:10px;height:2px;border-bottom:2px solid #373737}
+.title-handle .ha-hide:hover .hide-b{border-color:#03F}
+.title-handle .ha-max .max-b{top:7px;left:5px;width:10px;height:5px;border:1px solid #373737;border-top-width:3px}
+.title-handle .ha-max:hover .max-b{border-color:#03F}
+.title-handle .ha-revert .revert-b{top:4px;left:5px;width:10px;height:5px;border:1px solid #373737;border-top-width:3px}
+.title-handle .ha-revert .revert-t{top:8px;left:3px;width:10px;height:5px;border:1px solid #373737;border-top-width:3px;background:#eee}
+.title-handle .ha-revert:hover .revert-b,
+.title-handle .ha-revert:hover .revert-t{border-color:#03F}
+.title-handle .ha-fullscreen{color:#373737}
+.title-handle .ha-fullscreen:hover{color:#03F}
+.title-handle .ha-close{color:#373737}
+.title-handle .ha-close:hover{color:#03F}
+/*窗口内部iframe*/
+.window-frame{position:absolute;top:30px;right:2px;bottom:32px;*bottom:29px;left:2px;background:#FFF}
+*html .window-frame{
+	height:expression((function(el){
+		el.style.height=el.parentNode.clientHeight-59+"px";
+	})(this));
+}
+.window-frame iframe{position:absolute;border:0;height:100%;width:100%;top:0;bottom:0;left:0;right:0}
+/*底部*/
+.set-bar{_width:100%;position:absolute;background:#E8E8E8;border-top:1px solid #b9b9b9;bottom:0;height:30px;left:2px;right:2px;bottom:2px}
+.set-bar .btn{margin-top:3px;margin-right:5px;border:1px solid #E8E8E8;border-radius:3px 3px 3px 3px;color:#7D7D7D;cursor:pointer;display:inline-block;height:20px;padding:1px;position:relative}
+.set-bar .btn:hover{border:1px solid #7D7D7D;background:#FFF;color:#333;text-decoration:none}
+.set-bar .btn .btn-con{height:20px;line-height:21px;overflow:hidden;padding:0 6px 0 30px}

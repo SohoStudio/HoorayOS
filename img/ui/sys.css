@@ -1,0 +1,223 @@
+*{margin:0;padding:0}
+form,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,p{list-style:none outside none}
+textarea{resize:none;padding:5px}
+.fr{float:right}
+.fl{float:left}
+.disn{display:none}
+.breakword{
+white-space: pre;           /* CSS 2.0 */
+white-space: pre-wrap;      /* CSS 2.1 */
+white-space: pre-line;      /* CSS 3.0 */
+white-space: -pre-wrap;     /* Opera 4-6 */
+white-space: -o-pre-wrap;   /* Opera 7 */
+white-space: -moz-pre-wrap; /* Mozilla */
+white-space: -hp-pre-wrap;  /* HP Printers */
+word-wrap: break-word;      /* IE 5 */
+}
+
+.title{background:url(app_spr_x.png) repeat-x 0 -40px #E6F2FA;border-bottom:1px solid #DDD;padding-left:10px;height:27px;line-height:27px;color:#666;clear:both}
+.title{background-image:url(app_spr_x.png);background-repeat:repeat-x;position:relative;height:27px;padding:0 5px;line-height:27px;border-bottom:1px solid #DDD;background-position:0 -40px}
+.title b{color:#F60}
+.title .btn-back{float:left;margin:4px 5px 0 0}
+.title ul{position:absolute;top:0;left:-1px;height:28px;overflow:hidden}
+.title li{float:left;height:28px;padding:0 10px;line-height:28px;color:#999;cursor:pointer}
+.title li.focus{padding:0 9px;font-weight:bold;color:#444;border-left:1px solid #DDD;border-right:1px solid #DDD;background:#FFF;cursor:default}
+
+.input-label{float:left;width:100%;background:url(input-label.png) repeat-y;padding:10px 0;line-height:24px;border-bottom:1px solid #eee;clear:both}
+.input-label .label-text{float:left;padding-right:20px;text-align:right;width:130px}
+.input-label .label-box{float:left;margin:0 10px;clear:left;margin-top:-24px;margin-left:150px;_margin-left:75px}
+
+/* 分页 未知宽度居中 http://leotheme.cn/javascript/dom-float-center.html */
+.pagination{float:left;left:50%;position:relative;margin-top:12px}
+.pagination a,
+.pagination button{position:relative;right:50%;text-align:center;margin:0 2px}
+.pagination .prev{margin-right:15px}
+.pagination .next{margin-left:15px}
+
+/* 壁纸设置 */
+.wallpapertype{width:500px;height:40px;line-height:40px;margin:auto;margin-top:10px}
+.wallpaper{width:500px;margin:auto;margin-top:10px}
+.wallpaper li{width:150px;height:110px;float:left;margin-right:10px;border:5px solid #fff;background:#fff;cursor:pointer}
+.wallpaper li.three{margin-right:0}
+.wallpaper li:hover{border-color:#9FF;background:#9FF}
+.wallpaper li div{width:150px;height:20px;line-height:20px;text-align:center}
+.wapppapercustom{width:500px;margin:auto;margin-top:10px;border:1px solid #ccc}
+.wapppapercustom .tip{padding:10px}
+.wapppapercustom .view{width:500px;height:250px}
+.wapppapercustom .view ul{width:480px;height:230px;line-height:230px;margin:auto;margin-bottom:15px;text-align:center}
+.wapppapercustom .view ul li{border:5px solid #fff;overflow:hidden;float:left;width:150px;height:105px;margin:5px 0;position:relative}
+.wapppapercustom .view ul li a{display:none;position:absolute;z-index:2;top:-5px;right:-5px;text-decoration:none;width:48px;height:32px;line-height:32px;text-align:center;background-color:#ccc}
+.wapppapercustom .view ul li:hover{border-color:#ccc;cursor:pointer}
+.wapppapercustom .view ul li:hover a{display:block}
+.wapppaperwebsite{width:480px;margin:auto;margin-top:10px;padding:10px;border:1px solid #ccc}
+
+/* 皮肤设置 */
+.skin{width:550px;margin:auto;margin-top:10px}
+.skin li{width:256px;height:156px;margin:0 4px 10px 4px;float:left;border:5px solid #fff;background:#fff;cursor:pointer}
+.skin li:hover{border-color:#9FF;background:#9FF}
+
+/* 应用码头位置设置 */
+.dock_setting{width:710px;margin:auto}
+.dock_setting table{width:100%}
+.dock_setting .set_top{padding:10px 0 10px 320px}
+.dock_setting .set_left{padding:0 5px}
+.dock_setting .set_right{padding:0 5px}
+.dock_setting .set_view{display:inline;float:left;width:550px;height:280px;background-image:url(dock_setting.jpg)}
+.dock_setting .set_view_top{background-position:0 0}
+.dock_setting .set_view_left{background-position:0 -280px}
+.dock_setting .set_view_right{background-position:0 -560px}
+
+/* 应用市场 */
+.nav-sort a,
+.nav-personal a{background-image:url(app_spr_nav.png);background-repeat:no-repeat}
+.sub-nav{position:absolute;top:0;bottom:0;left:0;width:58px;height:100%;border-left:1px solid #5E616E;border-right:1px solid #434652;background:#545765}
+.nav-sort{position:absolute;top:4px;left:3px;width:56px}
+.nav-sort li{height:30px;vertical-align:middle}
+.nav-sort a{display:block;height:30px;line-height:30px;text-align:center;font-weight:bold;font-size:14px;color:#CCC;background-position:100px 100px}
+.nav-sort a:hover{color:#CCC;background-position:-57px 0}
+.nav-sort .focus a,
+.nav-sort .focus a:hover{color:#FFF;background-position:0 0}
+.nav-personal{position:absolute;bottom:0;left:-1px;width:60px;background:#474A57}
+.nav-personal dt{height:8px;overflow:hidden}
+.nav-personal dt a{display:block;height:8px;line-height:10;overflow:hidden;background-position:0 -31px}
+.nav-personal dt a:hover{background-position:-61px -31px}
+.nav-personal dd{height:50px;padding:0 1px 5px}
+.nav-personal dd a{display:block;height:50px;line-height:72px;text-align:center;overflow:hidden;color:#CCC}
+.nav-personal dd a:hover{color:#CCC}
+.nav-personal dd.focus a{color:#FFF}
+.per-app{background-position:0 -153px}
+.per-app:hover,
+.focus .per-app{background-position:-59px -153px}
+
+.wrap{position:absolute;top:0;right:0;bottom:0;left:60px;_position:relative;_left:0;_height:100%;_margin-left:60px;overflow:auto;background:#EEE}
+.mbox{border:1px solid #DDD;background:#FFF}
+.app-contents,
+.col-main{position:relative;padding:10px;overflow:hidden}
+.col-sub{float:right;width:215px;padding:10px 10px 0 0;overflow:hidden}
+.app-list-box{height:400px;overflow:hidden}
+
+.app-list-box .app-list{height:324px;overflow:hidden;background:url(app_list.png)}
+.app-list-box .app-list li{position:relative;height:54px;padding:6px 0 6px 68px;vertical-align:middle;overflow:hidden}
+.app-list-box .app-list li:hover{background:#FBEFCE}
+.app-list-box .app-list img{position:absolute;top:9px;left:10px;width:48px;height:48px}
+.app-list-box .app-list .app-name,
+.app-list-box .app-list .app-desc{display:block;width:240px;height:27px;line-height:27px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.app-list-box .app-list .app-name{font-weight:bold}
+.app-list-box .app-list .app-desc{color:#999}
+.app-list-box .app-list .app-desc b{font-weight:normal}
+.btn-add-s,
+.btn-run-s,
+.btn-remove-s{display:inline-block;width:24px;height:24px;line-height:20;overflow:hidden;background-position:0 -110px;position:absolute;top:21px;right:20px;background:url(app_spr_img.png) no-repeat}
+.btn-add-s{background-position:0 -110px}
+.btn-add-s:hover{background-position:-25px -110px}
+.btn-add-s:active{background-position:-50px -110px}
+.btn-run-s{background-position:0 -135px}
+.btn-run-s:hover{background-position:-25px -135px}
+.btn-run-s:active{background-position:-50px -135px}
+.btn-remove-s{background-position:0 -160px}
+.btn-remove-s:hover{background-position:-25px -160px}
+.btn-remove-s:active{background-position:-50px -160px}
+
+.star-box,
+.star-box i{background:url(app_spr_img.png) no-repeat}
+.star-box{position:relative;top:-46px;left:252px;display:inline-block;width:85px;height:15px;background-position:0 -62px}
+.star-box i{position:absolute;font-style:normal;top:0;left:0;height:15px;overflow:hidden;background-position:0 -78px}
+.star-num{position:absolute;top:10px;left:415px;display:inline-block;height:21px;line-height:21px;font-family:Georgia;font-weight:bold;font-size:16px;color:#F60}
+.app-stat{position:absolute;top:36px;right:93px;color:#999}
+.app-list-box .app-list b{color:#F60}
+
+.search-box{position:relative;height:28px;margin-bottom:8px}
+
+.commend-day{height:176px;margin-bottom:10px;overflow:hidden}
+.commend-day h3{height:30px;padding:0 10px;line-height:31px;font-size:12px;overflow:hidden;border-bottom:1px solid #DDD;background-image:url(app_spr_x.png);background-repeat:repeat-x;background-position:0 -37px}
+.commend-day .star-box{left:0;top:0;float:left;margin:5px 0 0 8px;_display:inline}
+.commend-container{position:relative;float:left;width:48px;height:48px;margin:10px 0 0 5px;overflow:hidden;padding:7px 21px 45px;background:url(commend_day.gif) no-repeat 0 0;_display:inline}
+.commend-text{float:right;width:100px;padding:0 10px 0 0;line-height:18px;color:#999}
+.commend-text h4{margin-bottom:3px;padding:3px 0;font-size:12px;color:#555;border-bottom:1px solid #DDD}
+.commend-text h4 strong,
+.commend-text h4 span{display:block}
+.commend-text h4 span{font-weight:normal;color:#999}
+.commend-text .con{width:100px;height:54px;word-wrap:break-word;overflow:hidden}
+.commend-text .btn-add,
+.commend-text .btn-run{margin-top:5px;margin-right:5px;float:right;display:inline-block;width:93px;height:30px;line-height:31px;text-indent:29px;overflow:hidden;color:#FFF;background:url(app_spr_img.png) no-repeat}
+.btn-add:hover{color:#FFF;background-position:-94px 0}
+.btn-add:active{background-position:-188px 0}
+.btn-run{background-position:0 -31px}
+.btn-run:hover{color:#FFF;background-position:-94px -31px}
+.btn-run:active{background-position:-188px -31px}
+
+/* 应用管理 */
+.top-bar{border-bottom:1px solid #ddd;width:100%;height:60px;overflow:hidden;position:fixed;z-index:999;top:0}
+.bottom-bar{border-top:1px solid #ddd;width:100%;height:60px;overflow:hidden;position:fixed;z-index:999;bottom:0}
+.top-bar .con,
+.bottom-bar .con{background:#F2F2F2;height:40px;padding:10px}
+
+.listbox{position:absolute;top:0;bottom:0;left:0;right:0}
+.listbox .middle{border-top:1px solid #fff;position:absolute;top:60px;bottom:0;left:0;right:0;overflow:auto;background:#fff}
+.listbox .middle li{width:100%;float:left}
+.listbox .middle li.selected{background:#FBEFCE}
+.listbox .middle .list-search{float:left;width:100%;border-bottom:1px solid #ccc}
+.listbox .middle .list-search .input-label{background:none;width:100%;padding:5px 0;height:auto;border-bottom:0;clear:both}
+.listbox .middle .list-title{background:url(spr_x.png) repeat-x 0 -702px #E6F2FA;height:25px;position:relative;color:#666;float:left;width:100%}
+.listbox .middle .list-con li{padding:3px 0}
+.listbox .middle .list-con li:hover{background:#FBEFCE}
+.listbox .middle span.level{float:left;width:20px}
+.listbox .middle span.name{float:left}
+.listbox .middle span.count{float:right;width:70px;text-align:center}
+.listbox .middle span.do{float:right;margin-right:20px;width:150px;text-align:center}
+.listbox .middle span.type{float:right;width:100px;text-align:center}
+
+.creatbox{position:absolute;top:0;bottom:0;left:0;right:0}
+.creatbox .middle{border-bottom:1px solid #fff;position:absolute;top:0;bottom:50px;left:0;right:0;overflow:auto}
+.creatbox .middle .detile-title{padding:10px 0;text-indent:15px;border-bottom:2px solid #ddd;font-weight:bold}
+
+.shortcutbox{display:inline-block;width:58px;height:58px;border:1px solid #fff;position:relative;z-index:1000}
+.shortcutbox:hover{border:1px solid #ccc;border-right:1px solid #fff}
+.shortcutbox:hover .shortcut-selicon{display:block}
+
+.shortcut-addicon{display:inline-block;width:50px;height:50px;margin:4px;background:url(desk_sprite.png) no-repeat -420px -100px;cursor:pointer}
+.shortcut-addicon.bgnone{background:none}
+.shortcut-addicon img{width:48px;height:48px;margin:1px}
+.shortcut-selicon{position:absolute;top:-1px;left:58px;width:340px;padding:10px 0 0 10px;background:#fff;border:1px solid #ccc;display:none}
+.shortcut-selicon a{display:block;width:48px;height:48px;padding:5px;margin-right:10px;margin-bottom:10px;float:left}
+.shortcut-selicon a:hover{background:url(desk_sprite.png) no-repeat -350px -100px}
+.shortcut-selicon img{width:48px;height:48px}
+
+.dashboard_target_box{width:250px;height:105px;border:3px dashed #E5E5E5;text-align:center;position:absolute;z-index:2000;top:0;left:0;cursor:pointer}
+.dashboard_target_box.over{border:3px dashed #000;background:#ffa}
+.dashboard_target_messages_container{display:inline-block;margin:12px 0 0;position:relative;text-align:center;height:44px;overflow:hidden;z-index:2000}
+.dashboard_target_box_message{position:relative;margin:4px auto;font:15px/18px helvetica,arial,sans-serif;font-size:15px;color:#999;font-weight:normal;width:150px;line-height:20px}
+.dashboard_target_box.over #dtb-msg1{color:#000;font-weight:bold}
+.dashboard_target_box.over #dtb-msg3{color:#ffa;border-color:#ffa}
+#dtb-msg2{color:orange}
+#dtb-msg3{display:block;border-top:1px #EEE dotted;padding:8px 24px}
+
+/*权限管理*/
+.permissions_apps{width:100%;float:left;clear:right}
+.permissions_apps .app{width:48px;height:48px;margin:0 10px 10px;float:left;position:relative}
+.permissions_apps .app img{width:48px;height:48px}
+.permissions_apps .app .del{display:none;position:absolute;right:-6px;top:-6px;text-align:center;font-weight:bold;font-size:12px;width:20px;height:20px;line-height:20px;cursor:pointer;background:#E6110E;color:#fff;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px}
+.permissions_apps .app:hover .del{display:block}
+
+.alert_addapps{width:340px;margin:auto}
+.alert_addapps .app{width:48px;height:48px;margin:10px 10px 20px 10px;float:left;position:relative;cursor:pointer}
+.alert_addapps .app img{width:48px;height:48px}
+.alert_addapps .app .name{width:100%;height:12px;line-height:12px;overflow:hidden}
+.alert_addapps .app .selected{display:none;position:absolute;width:16px;height:16px;right:0;bottom:0;background:url(selected.gif) no-repeat}
+.alert_addapps .act .selected{display:block}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
