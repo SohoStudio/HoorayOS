@@ -5,8 +5,6 @@ ob_start();
 session_start();
 header("Content-type: text/html; charset=utf-8");
 
-//新浪应用APIKEY
-define("SINA_APIKEY","319005669");
 //文件上传大小限制，单位MB
 $uploadFileMaxSize = 20;
 //允许文件上传类型

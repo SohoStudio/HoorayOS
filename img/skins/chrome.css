@@ -21,8 +21,10 @@
 .title-handle .ha-max:hover{background-position:-25px -18px}
 .title-handle .ha-revert{background-position:-50px 0}
 .title-handle .ha-revert:hover{background-position:-50px -18px}
-.title-handle .ha-close{background-position:-75px 0;_z-index:1;font-size:0;line-height:0;overflow:hidden;_margin-left:0;width:44px}
-.title-handle .ha-close:hover,.ui_close:focus{background-position:-75px -18px}
+.title-handle .ha-fullscreen{background-position:-75px 0}
+.title-handle .ha-fullscreen:hover{background-position:-75px -18px}
+.title-handle .ha-close{background-position:-100px 0;_z-index:1;font-size:0;line-height:0;overflow:hidden;_margin-left:0;width:44px}
+.title-handle .ha-close:hover,.ui_close:focus{background-position:-100px -18px}
 
 /*窗口内部iframe*/
 .window-frame{position:absolute;top:24px;right:2px;bottom:32px;*bottom:29px;left:2px;background:#FFF}

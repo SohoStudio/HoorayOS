@@ -29,7 +29,7 @@
 	<div class="col-sub">
 		<div class="search-box">
 			<div class="input-append">
-				<input type="text" name="keyword" id="keyword" style="width:170px;"><button id="search_3" class="btn"><i class="icon-search"></i></button>
+				<input type="text" name="keyword" id="keyword" style="width:158px"><button id="search_3" class="btn"><i class="icon-search"></i></button>
 			</div>
 		</div>
 		<div class="mbox commend-day">
@@ -66,7 +66,7 @@
 				</ul>
 			</div>
 			<ul class="app-list"></ul>
-			<div id="pagination" class="pagination"></div>
+			<div class="pagination pagination-centered" style="margin-top:6px"><ul id="pagination"></ul></div>
 			<input id="pagination_setting" type="hidden" maxrn="{$appcount}" prn="5" pid="0" />
 		</div>
 	</div>
@@ -138,12 +138,7 @@ function initPagination(cpn){
 	});
 }
 function pageselectCallback(page_id, reset){
-	art.dialog({
-		lock : true,
-		id : 'page',
-		esc : false,
-		content : '数据加载中...'
-	});
+	ZENG.msgbox.show('正在加载中，请稍后...', 6, 100000);
 	page_id = (page_id == undefined || isNaN(page_id)) ? 0 : page_id;
 	if(page_id == -1){
 		page_id = 0;
@@ -161,7 +156,7 @@ function pageselectCallback(page_id, reset){
 				initPagination(page_id);
 			}
 			$('.app-list').html(arr[1]);
-			art.dialog.list['page'].close();
+			ZENG.msgbox._hide();
 		}
 	}); 
 }

@@ -45,7 +45,13 @@
 				}	
 			}
 			foreach($rs as $v){
-				echo '<li><span class="level" style="width:20px">&nbsp;</span><span class="name">'.$v['name'].'</span><span class="do"><a href="detail.php?appid='.$v['tbid'].'">编辑</a> | <a href="javascript:;" class="list_del" appid="'.$v['tbid'].'">删除</a></span><span class="count">'.$v['usecount'].'</span><span class="type">'.$apptype[$v['kindid']-1]['name'].'</span><span class="type">'.$v['type'].'</span></li>';
+				echo '<tr class="list-bd">';
+					echo '<td style="text-align:left;padding-left:15px"><img src="../../'.$v['icon'].'" alt="'.$v['name'].'" class="appicon"><span class="appname">'.$v['name'].'</span></td>';
+					echo '<td>'.$v['type'].'</td>';
+					echo '<td>'.$apptype[$v['kindid']-1]['name'].'</td>';
+					echo '<td>'.$v['usecount'].'</td>';
+					echo '<td><a href="detail.php?appid='.$v['tbid'].'" class="btn btn-mini btn-link">编辑</a><a href="javascript:;" class="btn btn-mini btn-link do-del" appid="'.$v['tbid'].'">删除</a></td>';
+				echo '</tr>';
 			}
 			break;
 		case 'ajaxDel':

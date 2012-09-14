@@ -48,6 +48,7 @@
 				foreach($rs as $v){
 					echo '<li><a href="javascript:;"><img src="../../'.$v['icon'].'"></a><a href="javascript:;"><span class="app-name">'.$v['name'].'</span></a><span class="app-desc">'.$v['remark'].'</span><span class="star-box"><i style="width:'.($v['starnum']*20).'%;"></i></span><span class="star-num">'.floor($v['starnum']).'</span><span class="app-stat">'.$v['usecount'].' 人正在使用</span><a href="javascript:;" app_id="'.$v['tbid'].'" app_type="'.$v['type'].'" class="';
 					if($myapplist != ''){
+						var_dump($myapplist);exit;
 						if(in_array($v['tbid'], $myapplist)){
 							if($search_1 == -1){
 								echo 'btn-run-s" style="right:35px">打开应用</a>';

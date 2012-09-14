@@ -43,7 +43,10 @@
 				}	
 			}
 			foreach($rs as $v){
-				echo '<li><span class="level" style="width:20px">&nbsp;</span><span class="name">'.$v['name'].'</span><span class="do"><a href="detail.php?permissionid='.$v['tbid'].'">编辑</a> | <a href="javascript:;" class="list_del" permissionid="'.$v['tbid'].'">删除</a></span></li>';
+				echo '<tr class="list-bd">';
+					echo '<td style="text-align:left;padding-left:15px">'.$v['name'].'</td>';
+					echo '<td><a href="detail.php?permissionid='.$v['tbid'].'" class="btn btn-mini btn-link">编辑</a><a href="javascript:;" class="btn btn-mini btn-link do-del" permissionid="'.$v['tbid'].'">删除</a></td>';
+				echo '</tr>';
 			}
 			break;
 		case 'ajaxDel':

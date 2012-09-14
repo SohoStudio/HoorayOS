@@ -5,57 +5,59 @@
 <title>应用管理</title>
 {include file="../global_css.tpl"}
 <link rel="stylesheet" href="../../img/ui/sys.css">
+{literal}
+<style>
+body{margin:10px 10px 0}
+.appicon{width:32px;height:32px}
+.appname{margin-left:10px}
+</style>
+{/literal}
 </head>
 
 <body>
-<div class="top-bar">
-	<div class="con">
-		<a class="btn btn-primary btn-large" menu="creat" href="detail.php"><i class="icon-white icon-plus"></i> 添加新应用</a>
+<div class="well well-small" style="margin-bottom:10px">
+	<div class="form-inline">
+		<label>名称：</label>
+		<input type="text" name="search_1" id="search_1" class="span2">
+		<label style="margin-left:10px">分类：</label>
+		<select name="search_2" id="search_2" style="width:150px">
+			<option value="">全部</option>
+			{foreach from=$apptype item=at}
+			<option value="{$at.id}">{$at.name}</option>
+			{/foreach}
+		</select>
+		<a class="btn" menu="search" href="javascript:;" style="margin-left:10px"><i class="icon-search"></i> 搜索</a>
+		<a class="btn btn-primary fr" href="detail.php"><i class="icon-white icon-plus"></i> 添加新应用</a>
 	</div>
 </div>
-<div class="listbox">
-	<div class="middle">
-		<div class="list-search">
-			<div class="input-label">
-				<div class="input-prepend fl" style="margin-left:10px">
-					<span class="add-on">名称</span><input type="text" name="search_1" id="search_1">
-				</div>
-				<div class="input-prepend fl" style="margin-left:10px">
-					<span class="add-on">分类</span><select name="search_2" id="search_2">
-						<option value="">全部</option>
-						{foreach from=$apptype item=at}
-						<option value="{$at.id}">{$at.name}</option>
-						{/foreach}
-					</select>
-				</div>
-				<a class="btn fr" menu="search" href="javascript:;" style="margin-right:10px"><i class="icon-search"></i> 搜索</a>
-			</div>
-		</div>
-		<ul class="list-title">
-			<li>
-				<span class="level">&nbsp;</span>
-				<span class="name">应用名称</span>
-				<span class="do">操作</span>
-				<span class="count">使用人数</span>
-				<span class="type">分类</span>
-				<span class="type">类型</span>
-			</li>
-		</ul>
-		<ul class="list-con"></ul>
-		<div id="pagination" class="pagination"></div>
-		<input id="pagination_setting" type="hidden" maxrn="{$appcount}" prn="15" pid="0" />
-	</div>
-</div>
-
+<table class="list-table">
+	<thead>
+		<tr class="col-name">
+			<th>应用名称</th>
+			<th style="width:100px">类型</th>
+			<th style="width:100px">分类</th>
+			<th style="width:100px">使用人数</th>
+			<th style="width:150px">操作</th>
+		</tr>
+		<tr class="sep-row"><td colspan="100"></td></tr>
+		<tr class="toolbar">
+			<td colspan="100">
+				<b style="margin:0 10px">符合条件的记录</b>有<font class="list-count">0</font>条
+			</td>
+		</tr>
+		<tr class="sep-row"><td colspan="100"></td></tr>
+	</thead>
+	<tbody class="list-con"></tbody>
+	<tfoot><tr><td colspan="100"><div class="pagination pagination-centered"><ul id="pagination"></ul></div><input id="pagination_setting" type="hidden" maxrn="{$appcount}" prn="15" pid="0"></td></tr></tfoot>
+</table>
 {include file="../global_js.tpl"}
 {literal}
 <script>
 $().ready(function(){
-	//删除
-	$('.list_del').live('click', function(){
+	$('.list-con').on('click', '.do-del', function(){
 		var appid = $(this).attr('appid');
 		var appname = $(this).parent().prev().text();
-		art.dialog({
+		$.dialog({
 			id : 'ajaxedit',
 			content : '确定要删除 “' + appname + '” 该应用么？',
 			ok : function(){
@@ -89,12 +91,7 @@ function initPagination(cpn){
 	});
 }
 function pageselectCallback(page_id,reset){
-	art.dialog({
-		lock : true,
-		id : 'page',
-		esc : false,
-		content : '数据加载中...'
-	});
+	ZENG.msgbox.show('正在加载中，请稍后...', 6, 100000);
 	page_id = (page_id == undefined || isNaN(page_id)) ? 0 : page_id;
 	if(page_id == -1){
 		page_id = 0;
@@ -109,10 +106,11 @@ function pageselectCallback(page_id,reset){
 			var arr = msg.split('<{|*|}>');
 			if(parseInt(arr[0], 10) != -1){
 				$('#pagination_setting').attr('maxrn', arr[0]);
+				$('.list-count').text(arr[0]);
 				initPagination(page_id);
 			}
 			$('.list-con').html(arr[1]);
-			art.dialog.list['page'].close();
+			ZENG.msgbox._hide();
 		}
 	}); 
 }

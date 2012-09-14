@@ -113,7 +113,6 @@ HROS.widget = (function(){
 		reduction : function(){
 			if($.cookie('widgetState')){
 				var widgetState = eval("(" + $.cookie('widgetState') + ")");
-				console.log(widgetState);
 				for(var i = 0; i < widgetState.length; i++){
 					HROS.widget.create(widgetState[i].id, widgetState[i].type);
 				}
@@ -141,7 +140,7 @@ HROS.widget = (function(){
 			if(!HROS.widget.checkCookie(id, type)){
 				var json = [];
 				if($.cookie('widgetState')){
-					var widgetState = eval("(" + $.cookie('widgetState') + ")"), len = 0;
+					var widgetState = eval("(" + $.cookie('widgetState') + ")"), len = widgetState.length;
 					for(var i = 0; i < len; i++){
 						json.push("{'id':'" + widgetState[i].id + "','type':'" + widgetState[i].type + "','top':'" + widgetState[i].top + "','left':'" + widgetState[i].left + "'}");
 					}

@@ -19,7 +19,7 @@ word-wrap: break-word;      /* IE 5 */
 .title{background-image:url(app_spr_x.png);background-repeat:repeat-x;position:relative;height:27px;padding:0 5px;line-height:27px;border-bottom:1px solid #DDD;background-position:0 -40px}
 .title b{color:#F60}
 .title .btn-back{float:left;margin:4px 5px 0 0}
-.title ul{position:absolute;top:0;left:-1px;height:28px;overflow:hidden}
+.title ul{margin:0;position:absolute;top:0;left:-1px;height:28px;overflow:hidden}
 .title li{float:left;height:28px;padding:0 10px;line-height:28px;color:#999;cursor:pointer}
 .title li.focus{padding:0 9px;font-weight:bold;color:#444;border-left:1px solid #DDD;border-right:1px solid #DDD;background:#FFF;cursor:default}
 
@@ -27,12 +27,16 @@ word-wrap: break-word;      /* IE 5 */
 .input-label .label-text{float:left;padding-right:20px;text-align:right;width:130px}
 .input-label .label-box{float:left;margin:0 10px;clear:left;margin-top:-24px;margin-left:150px;_margin-left:75px}
 
-/* 分页 未知宽度居中 http://leotheme.cn/javascript/dom-float-center.html */
-.pagination{float:left;left:50%;position:relative;margin-top:12px}
-.pagination a,
-.pagination button{position:relative;right:50%;text-align:center;margin:0 2px}
-.pagination .prev{margin-right:15px}
-.pagination .next{margin-left:15px}
+/*列表*/
+.list-table{width:100%;border-collapse:collapse}
+.list-table .col-name th{font-weight:normal;height:31px;text-align:center;background:url(bought-table.png) repeat-x;border-top:1px solid #c4d5e0;border-bottom:1px solid #c4d5e0;color:black}
+.list-table .sep-row{height:7px}
+.list-table .toolbar{height:30px;background-color:#F3F3F3}
+.list-table .toolbar td{border:1px solid #DEDEE0;border-width:1px 0}
+.list-table .list-hd{background:#E8F2FF;color:#404040}
+.list-table .list-hd td{border:1px solid #D4E7FF;height:28px;padding-bottom:1px;line-height:28px}
+.list-table .list-bd td{padding:8px 5px;overflow:hidden;text-align:center;vertical-align:middle;border:1px solid #D4E7FF;border-left-color:#E6E6E6;border-right-color:#E6E6E6}
+.list-table .list-count{font-family:'Courier New',Courier,mono;font-style:italic;font-weight:bold;margin:0 8px 0 5px;font-size:14px}
 
 /* 壁纸设置 */
 .wallpapertype{width:500px;height:40px;line-height:40px;margin:auto;margin-top:10px}
@@ -71,7 +75,7 @@ word-wrap: break-word;      /* IE 5 */
 .nav-sort a,
 .nav-personal a{background-image:url(app_spr_nav.png);background-repeat:no-repeat}
 .sub-nav{position:absolute;top:0;bottom:0;left:0;width:58px;height:100%;border-left:1px solid #5E616E;border-right:1px solid #434652;background:#545765}
-.nav-sort{position:absolute;top:4px;left:3px;width:56px}
+.nav-sort{position:absolute;top:4px;left:3px;width:56px;margin:0}
 .nav-sort li{height:30px;vertical-align:middle}
 .nav-sort a{display:block;height:30px;line-height:30px;text-align:center;font-weight:bold;font-size:14px;color:#CCC;background-position:100px 100px}
 .nav-sort a:hover{color:#CCC;background-position:-57px 0}
@@ -81,7 +85,7 @@ word-wrap: break-word;      /* IE 5 */
 .nav-personal dt{height:8px;overflow:hidden}
 .nav-personal dt a{display:block;height:8px;line-height:10;overflow:hidden;background-position:0 -31px}
 .nav-personal dt a:hover{background-position:-61px -31px}
-.nav-personal dd{height:50px;padding:0 1px 5px}
+.nav-personal dd{height:50px;padding:0 1px 5px;margin-left:0}
 .nav-personal dd a{display:block;height:50px;line-height:72px;text-align:center;overflow:hidden;color:#CCC}
 .nav-personal dd a:hover{color:#CCC}
 .nav-personal dd.focus a{color:#FFF}
@@ -96,7 +100,7 @@ word-wrap: break-word;      /* IE 5 */
 .col-sub{float:right;width:215px;padding:10px 10px 0 0;overflow:hidden}
 .app-list-box{height:400px;overflow:hidden}
 
-.app-list-box .app-list{height:324px;overflow:hidden;background:url(app_list.png)}
+.app-list-box .app-list{margin:0;height:324px;overflow:hidden;background:url(app_list.png)}
 .app-list-box .app-list li{position:relative;height:54px;padding:6px 0 6px 68px;vertical-align:middle;overflow:hidden}
 .app-list-box .app-list li:hover{background:#FBEFCE}
 .app-list-box .app-list img{position:absolute;top:9px;left:10px;width:48px;height:48px}
@@ -129,11 +133,11 @@ word-wrap: break-word;      /* IE 5 */
 .search-box{position:relative;height:28px;margin-bottom:8px}
 
 .commend-day{height:176px;margin-bottom:10px;overflow:hidden}
-.commend-day h3{height:30px;padding:0 10px;line-height:31px;font-size:12px;overflow:hidden;border-bottom:1px solid #DDD;background-image:url(app_spr_x.png);background-repeat:repeat-x;background-position:0 -37px}
+.commend-day h3{margin:0;padding:0 10px;height:30px;line-height:31px;font-size:12px;overflow:hidden;border-bottom:1px solid #DDD;background-image:url(app_spr_x.png);background-repeat:repeat-x;background-position:0 -37px}
 .commend-day .star-box{left:0;top:0;float:left;margin:5px 0 0 8px;_display:inline}
 .commend-container{position:relative;float:left;width:48px;height:48px;margin:10px 0 0 5px;overflow:hidden;padding:7px 21px 45px;background:url(commend_day.gif) no-repeat 0 0;_display:inline}
 .commend-text{float:right;width:100px;padding:0 10px 0 0;line-height:18px;color:#999}
-.commend-text h4{margin-bottom:3px;padding:3px 0;font-size:12px;color:#555;border-bottom:1px solid #DDD}
+.commend-text h4{margin-top:0;margin-bottom:3px;padding:3px 0;font-size:12px;color:#555;border-bottom:1px solid #DDD}
 .commend-text h4 strong,
 .commend-text h4 span{display:block}
 .commend-text h4 span{font-weight:normal;color:#999}
@@ -151,21 +155,6 @@ word-wrap: break-word;      /* IE 5 */
 .bottom-bar{border-top:1px solid #ddd;width:100%;height:60px;overflow:hidden;position:fixed;z-index:999;bottom:0}
 .top-bar .con,
 .bottom-bar .con{background:#F2F2F2;height:40px;padding:10px}
-
-.listbox{position:absolute;top:0;bottom:0;left:0;right:0}
-.listbox .middle{border-top:1px solid #fff;position:absolute;top:60px;bottom:0;left:0;right:0;overflow:auto;background:#fff}
-.listbox .middle li{width:100%;float:left}
-.listbox .middle li.selected{background:#FBEFCE}
-.listbox .middle .list-search{float:left;width:100%;border-bottom:1px solid #ccc}
-.listbox .middle .list-search .input-label{background:none;width:100%;padding:5px 0;height:auto;border-bottom:0;clear:both}
-.listbox .middle .list-title{background:url(spr_x.png) repeat-x 0 -702px #E6F2FA;height:25px;position:relative;color:#666;float:left;width:100%}
-.listbox .middle .list-con li{padding:3px 0}
-.listbox .middle .list-con li:hover{background:#FBEFCE}
-.listbox .middle span.level{float:left;width:20px}
-.listbox .middle span.name{float:left}
-.listbox .middle span.count{float:right;width:70px;text-align:center}
-.listbox .middle span.do{float:right;margin-right:20px;width:150px;text-align:center}
-.listbox .middle span.type{float:right;width:100px;text-align:center}
 
 .creatbox{position:absolute;top:0;bottom:0;left:0;right:0}
 .creatbox .middle{border-bottom:1px solid #fff;position:absolute;top:0;bottom:50px;left:0;right:0;overflow:auto}

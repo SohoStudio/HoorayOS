@@ -74,7 +74,6 @@ $().ready(function(){
 		}
 	});
 
-	$('#value_1,#value_2,#reg_1,#reg_2,#reg_3').placeholder({labelMode:true,labelStyle:{left:8,top:3,fontSize:'14px'},labelAlpha:true,labelAcross:true});
 	$('.log .submit').click(function(){
 		if($('#value_1').val()!="" && $('#value_2').val()!=""){
 			$('.log .submit').hide();

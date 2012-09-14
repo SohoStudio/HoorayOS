@@ -9,7 +9,7 @@ HROS.base = (function(){
 		init : function(){
 			//文件上传
 			//HROS.uploadFile.init();
-			//增加离开页面确认窗口，IE下有bug，暂时屏蔽
+			//增加离开页面确认窗口，IE不支持，故屏蔽
 			if(!$.browser.msie){
 				window.onbeforeunload = Util.confirmExit;
 			}
@@ -27,10 +27,6 @@ HROS.base = (function(){
 			HROS.base.resize();
 			//用于判断网页是否缩放，该功能提取自QQ空间
 			HROS.zoom.init();
-			//加载壁纸
-			HROS.wallpaper.get(function(){
-				HROS.wallpaper.set();
-			});
 			//初始化分页栏
 			HROS.navbar.init();
 			//绑定任务栏点击事件
@@ -54,11 +50,23 @@ HROS.base = (function(){
 					HROS.app.get();
 				});
 			});
+			//加载壁纸
+			HROS.wallpaper.get(function(){
+				HROS.wallpaper.set();
+			});
 			//绑定应用码头2个按钮的点击事件
-			$('.dock-tool-pinyin').on('mousedown', function(){
+			$('.dock-tool-setting').on('mousedown', function(){
 				return false;
 			}).on('click',function(){
-				javascript:(function(q){q?q.toggle():function(d,j){j=d.createElement('script');j.async=true;j.src='//ime.qq.com/fcgi-bin/getjs';j.setAttribute('ime-cfg','lt=2');d=d.getElementsByTagName('head')[0];d.insertBefore(j,d.firstChild)}(document)})(window.QQWebIME);
+				HROS.window.createTemp({
+					id : 'zmsz',
+					title : '桌面设置',
+					url : 'sysapp/desksetting/index.php',
+					width : 750,
+					height : 450,
+					isresize : false,
+					isflash : false
+				});
 			});
 			$('.dock-tool-style').on('mousedown', function(){
 				return false;

@@ -3,6 +3,6 @@
 	$db_hoorayos_config = array(
 		'dsn'=>'mysql:host=localhost;dbname=hoorayos',
 		'name'=>'root',
-		'password'=>'hooray'
+		'password'=>''
 	);
 ?>

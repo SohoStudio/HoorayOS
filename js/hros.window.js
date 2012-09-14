@@ -212,6 +212,8 @@ HROS.window = (function(){
 										switch(sc[i]['type']){
 											case 'app':
 											case 'widget':
+											case 'papp':
+											case 'pwidget':
 												$(windowId).find('.folder_body').append(appbtnTemp({
 													'top' : 0,
 													'left' : 0,
@@ -247,7 +249,16 @@ HROS.window = (function(){
 								$(windowId + ' .folder_body').on('contextmenu', '.appbtn', function(e){
 									$('.popup-menu').hide();
 									$('.quick_view_container').remove();
-									var popupmenu = HROS.popupMenu.app($(this));
+									switch($(this).attr('type')){
+										case 'app':
+										case 'widget':
+											var popupmenu = HROS.popupMenu.app($(this));
+											break;
+										case 'papp':
+										case 'pwidget':
+											var popupmenu = HROS.popupMenu.papp($(this));
+											break;
+									}
 									var l = ($(document).width() - e.clientX) < popupmenu.width() ? (e.clientX - popupmenu.width()) : e.clientX;
 									var t = ($(document).height() - e.clientY) < popupmenu.height() ? (e.clientY - popupmenu.height()) : e.clientY;
 									popupmenu.css({

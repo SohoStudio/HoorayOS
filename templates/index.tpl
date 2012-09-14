@@ -28,7 +28,7 @@
 				<div class="dock-middle">
 					<div class="dock-applist"></div>
 					<div class="dock-toollist">
-						<a href="javascript:;" class="dock-tool-pinyin" title="QQ拼音输入法"></a>
+						<a href="javascript:;" class="dock-tool-setting" title="桌面设置"></a>
 						<a href="javascript:;" class="dock-tool-style" title="主题设置"></a>
 					</div>
 				</div>
@@ -153,13 +153,13 @@ $().ready(function(){
 	//初始化
 	HROS.base.init();
 	//误删
-	art.dialog({
-		title: '欢迎使用HoorayOS',
-		icon: 'face-smile',
-		width: 320,
-		content: 'HoorayOS是否就是你一直想要的web桌面么？<br>' + '那么我非常期待您能够热情的提供<font style="color:red">35元</font>或者其他金额的捐赠鼓励，正如您支持其他开源项目一样。<br>' + '支付宝：<a href="https://me.alipay.com/hooray" style="color:#214FA3" target="_blank">https://me.alipay.com/hooray</a><div style="width:100%;height:0px;font-size:0;border-bottom:1px solid #ccc"></div>如果你对本框架感兴趣，欢迎加入讨论群：<br>213804727' + '<div style="width:100%;height:0px;font-size:0;border-bottom:1px solid #ccc"></div>' +
-				'HoorayOS仅供学习交流，禁止商业用途，版权归作者所有，未经作者同意下，不得删除代码中作者信息。若需要商业使用，请联系QQ：304327508 进行授权'
-	});
+//	art.dialog({
+//		title: '欢迎使用HoorayOS',
+//		icon: 'face-smile',
+//		width: 320,
+//		content: 'HoorayOS是否就是你一直想要的web桌面么？<br>' + '那么我非常期待您能够热情的提供<font style="color:red">35元</font>或者其他金额的捐赠鼓励，正如您支持其他开源项目一样。<br>' + '支付宝：<a href="https://me.alipay.com/hooray" style="color:#214FA3" target="_blank">https://me.alipay.com/hooray</a><div style="width:100%;height:0px;font-size:0;border-bottom:1px solid #ccc"></div>如果你对本框架感兴趣，欢迎加入讨论群：<br>213804727' + '<div style="width:100%;height:0px;font-size:0;border-bottom:1px solid #ccc"></div>' +
+//				'HoorayOS仅供学习交流，禁止商业用途，版权归作者所有，未经作者同意下，不得删除代码中作者信息。若需要商业使用，请联系QQ：304327508 进行授权'
+//	});
 });
 </script>
 {/literal}

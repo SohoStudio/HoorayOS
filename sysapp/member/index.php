@@ -46,7 +46,11 @@
 			}
 			foreach($rs as $v){
 				$type = $v['type'] == 1 ? '管理员' : '普通会员';
-				echo '<li><span class="level" style="width:20px">&nbsp;</span><span class="name">'.$v['username'].'</span><span class="do"><div class="input-prepend"><a class="btn btn-mini btn-info" href="detail.php?memberid='.$v['tbid'].'"><i class="icon-edit"></i> 编辑</a><a class="list_del btn btn-mini" href="javascript:;" memberid="'.$v['tbid'].'"><i class="icon-remove"></i> 删除</a></div></span><span class="type">'.$type.'</span></li>';
+				echo '<tr class="list-bd">';
+					echo '<td style="text-align:left;padding-left:15px">'.$v['username'].'</td>';
+					echo '<td>'.$type.'</td>';
+					echo '<td><a href="detail.php?memberid='.$v['tbid'].'" class="btn btn-mini btn-link">编辑</a><a href="javascript:;" class="btn btn-mini btn-link do-del" memberid="'.$v['tbid'].'">删除</a></td>';
+				echo '</tr>';
 			}
 			break;
 		case 'ajaxDel':

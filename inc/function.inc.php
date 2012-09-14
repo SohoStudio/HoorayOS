@@ -1,34 +1,4 @@
 <?php
-	//转成新浪短网址
-	function toShortUrl($long_url){
-		$apiKey = SINA_APIKEY;
-		$apiUrl = 'http://api.t.sina.com.cn/short_url/shorten.json?source='.$apiKey.'&url_long='.$long_url;
-		$curlObj = curl_init();
-		curl_setopt($curlObj, CURLOPT_URL, $apiUrl);
-		curl_setopt($curlObj, CURLOPT_RETURNTRANSFER, 1);
-		curl_setopt($curlObj, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curlObj, CURLOPT_HEADER, 0);
-		curl_setopt($curlObj, CURLOPT_HTTPHEADER, array('Content-type:application/json'));
-		$response = curl_exec($curlObj);
-		curl_close($curlObj);
-		$json = json_decode($response);
-		return $json[0]->url_short;
-	}
-	//还原新浪短网址
-	function toLongUrl($short_url){
-		$apiKey = SINA_APIKEY;
-		$apiUrl = 'http://api.t.sina.com.cn/short_url/expand.json?source='.$apiKey.'&url_short='.$short_url;
-		$curlObj = curl_init();
-		curl_setopt($curlObj, CURLOPT_URL, $apiUrl);
-		curl_setopt($curlObj, CURLOPT_RETURNTRANSFER, 1);
-		curl_setopt($curlObj, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($curlObj, CURLOPT_HEADER, 0);
-		curl_setopt($curlObj, CURLOPT_HTTPHEADER, array('Content-type:application/json'));
-		$response = curl_exec($curlObj);
-		curl_close($curlObj);
-		$json = json_decode($response);
-		return $json[0]->url_long;
-	}
 	//防sql注入
 	function sqlInjection($string,$force=0){
 		if(!$GLOBALS['magic_quotes_gpc'] || $force){
