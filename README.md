@@ -1,3 +1,8 @@
+官方唯一演示地址：http://hoorayos.com<br/>
+官方交流群：213804727
+
+----
+
 # HoorayOS
 
 *HoorayOS是一款web桌面应用框架，你可以用它二次开发出类似Q+web这类的桌面应用网站，也可以开发出适合项目的桌面管理系统。*
@@ -38,13 +43,6 @@
 > 网站授权协议下载：<http://code.google.com/p/hoorayos/downloads/detail?name=HoorayOS%E5%95%86%E4%B8%9A%E6%8E%88%E6%9D%83%E5%8D%8F%E8%AE%AE%20-%20%E7%BD%91%E7%AB%99.doc&can=2&q=#makechanges><br>
 > 公司授权协议下载：<http://code.google.com/p/hoorayos/downloads/detail?name=HoorayOS%E5%95%86%E4%B8%9A%E6%8E%88%E6%9D%83%E5%8D%8F%E8%AE%AE%20-%20%E5%85%AC%E5%8F%B8.doc&can=2&q=#makechanges><br>
 > 联系QQ：304327508
-
-----
-
-官方唯一演示地址：http://hoorayos.com<br/>
-官方交流群：213804727
-
-----
 
 # Q&A
 
